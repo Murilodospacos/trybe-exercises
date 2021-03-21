@@ -2,4 +2,43 @@ div:hover {
     border: 2px solid black;
 }
 
- 
+div:nth-last-of-type(1) {
+    background-color: darkgreen;
+    font-style: unset;
+}
+div:nth-last-of-type(2) {
+    background-color: aquamarine;
+}
+div:nth-last-of-type(3) {
+    background-color: lightcoral;
+    border: 5px solid black;
+}
+div:nth-last-of-type(4) {
+    background-color: peru;
+}
+div:nth-last-of-type(5) {
+    background-color: navy;
+}
+
+.primary{
+    font-size: xx-large; 
+}
+.secondary {
+
+    font-size: xx-large;
+}
+.additional {
+    font-size: xx-large;
+}
+.dark{
+    
+    font-size: xx-large;
+}
+.clear{
+    
+    font-size: xx-large;
+}
+div:nth-of-type(2n+1) h3 {
+    font-style: italic;
+  }
+  
