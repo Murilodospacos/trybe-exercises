@@ -4,6 +4,6 @@ let adding = 0;
 for (index = 0; index < numbers.length; index += 1){
   adding += numbers[index];
 }
-console.log(adding);
+console.log('A soma dos elementos do array é: ' + adding +'!');
 
 //278
