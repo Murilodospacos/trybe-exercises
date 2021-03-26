@@ -1,1 +1,6 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [];
+
+for (let index = 1; index < 26; index += 1) {
+  numbers.push(index / 2);
+}
+console.log(numbers);
