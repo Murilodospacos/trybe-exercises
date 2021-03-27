@@ -25,3 +25,13 @@ for (let index = 0; index < n; index +=1){
 for (let i = 0; i < n; i += 1) {
     console.log(prints);
 }
+
+// outra forma de resolver
+
+let n = 5;
+let ast = '*';
+
+
+for (let index = 0; index < n; index +=1){
+  console.log(ast.repeat(n));
+}
