@@ -68,18 +68,6 @@ span {
     padding: 15px;
 }
 
-#img2 {
-    float: right;
-    position: relative;
-    width: 550px;
-    height: auto;
-    left: -50px;
-    top: 70px;
-    border-radius: 15%;
-    display: inline-block;
-
-}
-
 table {
     left: 300px;
     position: relative;
@@ -95,12 +83,31 @@ table, th, td {
   }
 
 #img1 {
-    display: inline-block;
-    position: relative;
     float: left;
     width: 550px;
-    height: auto;
-    left: 20px;
-    top: 20px;
+    margin-left: 100px;
+    margin-top: 50px;
     border-radius: 15%;
+}
+
+#img2 {
+    float: right;
+    width: 600px;
+    height: 410px;
+    margin-top: 50px;
+    margin-right: 100px;
+    border-radius: 15%;
+}
+
+.moreinformation {
+    display:inline-block;
+    position: relative;
+    left: 150px;
+    
+}
+
+.eyesight {
+    display: inline-block;
+    position: relative;
+    width: 600px;
 }
