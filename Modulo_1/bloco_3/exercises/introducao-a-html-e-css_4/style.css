@@ -42,7 +42,8 @@ main {
 
 .facts {
     font-size: 15px;
-    padding: 15px 30px 15px;
+    padding: 30px 30px 15px;
+    
 }
 span {
     font-weight: bold;
