@@ -94,7 +94,7 @@ table, th, td {
 #img2 {
     float: right;
     width: 600px;
-    height: 410px;
+    height: 380px;
     margin-top: 50px;
     margin-right: 100px;
     border-radius: 15%;
@@ -103,7 +103,8 @@ table, th, td {
 .moreinformation {
     display:inline-block;
     position: relative;
-    left: 150px;
+    left: 800px;
+    top: 20px;
 }
 
 .eyesight {
