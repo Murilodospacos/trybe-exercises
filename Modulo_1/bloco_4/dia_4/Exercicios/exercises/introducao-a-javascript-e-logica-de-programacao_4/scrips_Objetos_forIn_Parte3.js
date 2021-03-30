@@ -5,3 +5,12 @@ let info = {
 };
 
 console.log('Bem-vinda, ' + info.personagem);
+
+info['recorrente'] = 'sim';
+
+console.log(info);
+
+for(var index in info) {
+  console.log(index);
+}
+
