@@ -9,7 +9,8 @@ n = 5
 *****
 
 */
-const pyranmid = (n) => {
+const pyranmid = (n) => {git
+  
   const midPoint = Math.floor((n * 2 - 1) / 2) 
   
   for (let row = 0; row < n; row += 1) {
