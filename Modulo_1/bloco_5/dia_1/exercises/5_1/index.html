@@ -54,34 +54,34 @@
 
         //2. Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
         function colorSquareBackground (){
-        let colorSquare = document.getElementsByClassName('main-content')[0];
-        colorSquare.style.backgroundColor = "rgb(76,164,109)";
+          let colorSquare = document.getElementsByClassName('main-content')[0];
+          colorSquare.style.backgroundColor = "rgb(76,164,109)";
         }
         colorSquareBackground();
         
         //3. Crie uma função que mude a cor do quadrado vermelho para branco.
         function changeColorSquare (){
-        let squareColor = document.getElementsByClassName('center-content')[0];
-        squareColor.style.backgroundColor = "white";
+          let squareColor = document.getElementsByClassName('center-content')[0];
+          squareColor.style.backgroundColor = "white";
         }
         changeColorSquare();
 
         //4. Crie uma função que corrija o texto da tag <h1>.
         function correctText () {
-        let myTitle = document.getElementById('h1')[0];
-        myTitle.innerHTML = "Exercício 5.1 - JavaScript"
+          let myTitle = document.getElementsByTagName('h1')[0];
+          myTitle.innerHTML = "Exercício 5.1 - JavaScript"
         }
         correctText();
         //5. Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
         function modifyTextCapital () {
-        let modify = document.getElementsByTagName('p')[0];
-        modify.innerHTML = modify.innerHTML.toLocaleLowerCase();
+          let modify = document.getElementsByTagName('p')[0];
+          modify.innerHTML = modify.innerHTML.toUpperCase();
         }
         modifyTextCapital();
 
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         function showtagP() {
-        let displayContent = document.getElementsByTagName('p');
+          let displayContent = document.getElementsByTagName('p');
           for(let index = 0; index < displayContent.length; index +=1){
             console.log(displayContent[index].innerHTML);
           }
