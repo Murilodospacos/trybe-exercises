@@ -45,7 +45,7 @@
         - document.getElementsByClassName()
         - document.getElementsByTagName()
         1. Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)*/
-          
+
         function transformTagP (){
           let responseText = document.getElementsByTagName('p')[1];
           responseText.innerHTML = "Estar trabalhando na área e estar ganhando um bom salário para ter uma condição de vida melhor e ter um filho"
@@ -77,12 +77,16 @@
         let modify = document.getElementsByTagName('p')[0];
         modify.innerHTML = modify.innerHTML.toLocaleLowerCase();
         }
-        modifyTextCapital
+        modifyTextCapital();
 
         //6. Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         function showtagP() {
-
+        let displayContent = document.getElementsByTagName('p');
+          for(let index = 0; index < displayContent.length; index +=1){
+            console.log(displayContent[index].innerHTML);
+          }
         }
+        showtagP();
         
     </script>
   </body>
