@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+   <!--
+    1. Adicione ao seu HTML uma classe com alguns estilos para os seus dois parágrafos.
+    2. Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+    3. Altere algum estilo do primeiro deles.
+    4. Recupere o subtítulo pela tag.
+  -->
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p class="paragraph">Dê uma <span>cor</span> para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p class="second-paragraph"><strong>Segundo parágrafo!</strong></p>
+
+    <script>
+      let paragraph = document.getElementsByClassName("paragraph")[0];
+      paragraph.style.color = "red";
+
+      let title = document.getElementById("page-title");
+      title.innerText = "A Cabana";
+
+      let secondParagraph = document.getElementsByClassName("second-paragraph")[0];
+      secondParagraph.innerText = " Gosto muito de assistir filmes no final de semana ";
+      secondParagraph.style.color = "blue";
+
+      let subTitle = document.getElementById("subtitle");
+      subTitle.innerText = "Hobby";
+
+    </script>
+  </body>
+</html>
