@@ -20,7 +20,16 @@
   </div>
 </div>
   <script>
-    document.querySelector('elementoOndeVoceEsta');
+    // Exercicio 1
+    document.querySelector('#elementoOndeVoceEsta');
+    // Exercicio 2
+    var response = document.querySelector('#elementoOndeVoceEsta').parentNode;
+    response.style.background = 'blue';
+    // Exercicio 3 
+    var childToChild = document.querySelector('#primeiroFilhoDoFilho');
+    childToChild.innerHTML = 'Exercicio 3'
+    console.log(childToChild)
+    // Exercicio 4
   </script>
 </body>
 </html>
