@@ -59,8 +59,8 @@
     <script>
       //Exercicio 1
       const mytitle = document.createElement('h1')
-      title.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
-      document.body.appendChild(title);
+      mytitle.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
+      document.body.appendChild(mytitle);
       
       //Exercicio 2
       const myDiv = document.createElement('div');
@@ -110,9 +110,13 @@
         myDiv.appendChild(myTagsH3s);
       }
 
+      // Segunda Parte
 
+      // Exercise 1
+      const newTitle = document.getElementsByTagName('h1')[0];
+      newTitle.className = 'title';
 
-
+      
     </script>
   </body>
 </html>
