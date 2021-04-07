@@ -58,40 +58,47 @@
   <body>
     <script>
       //Exercicio 1
-      const mytitle = document.createElement('h1')
-      mytitle.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
-      document.body.appendChild(mytitle);
-      
+      const myTitle = document.createElement('h1')
+      myTitle.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
+      document.body.appendChild(myTitle);
+      console.log(myTitle);
+
       //Exercicio 2
       const myDiv = document.createElement('div');
       myDiv.className = 'main-content';
       document.body.appendChild(myDiv);
+      console.log(myDiv);
 
       //Exercicio 3
       const mySecondDiv = document.createElement('div')
       mySecondDiv.className = 'center-content';
       myDiv.appendChild(mySecondDiv);
+      console.log(mySecondDiv);
 
       //Exercicio 4
       const myTagP = document.createElement('p');
       myTagP.innerHTML = "Aprendendo DOM";
       mySecondDiv.appendChild(myTagP);
+      console.log(myTagP);
 
       //Exercicio 5
       const myThirdDiv = document.createElement('div');
       myThirdDiv.className = 'left-content';
       myDiv.appendChild(myThirdDiv);
+      console.log(myThirdDiv);
 
       //Exercicio 6
       const myFourthDiv = document.createElement('div');
       myFourthDiv.className = 'right-content';
       myDiv.appendChild(myFourthDiv);
+      console.log(myFourthDiv);
 
       //Exercicio 7
       const myImage = document.createElement('img');
       myimage.src = "https://picsum.photos/200";
       myImage.className = 'small-image';
       myThirdDiv.appendChild(myImage);
+      console.log(myImage);
       
       //Exercicio 8
       const myListUl = document.createElement('ul');
@@ -102,6 +109,7 @@
         itens.innerHTML = listNumber[index];
         myListUl.appendChild(itens);
       }
+      console.log(myListUl);
 
       //Exercicio 9
       for(let index = 0; index <=3; index += 1){
@@ -109,14 +117,24 @@
         myTagsH3s.innerHTML = `Sub título ${[index]}`;
         myDiv.appendChild(myTagsH3s);
       }
+      console.log(myTagsH3s);
 
       // Segunda Parte
 
       // Exercise 1
       const newTitle = document.getElementsByTagName('h1')[0];
       newTitle.className = 'title';
+      console.log(newTitle);
+
+      //Exercise 2
+      const newDescriptionH3 = document.createElement('h3');
+      for(let index = 0; index < 3; index +=1){
+        newDescriptionH3[index].className = 'description';
+      }
+      console.log(newDescriptionH3);
 
       
+
     </script>
   </body>
 </html>
