@@ -14,3 +14,8 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
+ function createListCalendary (){
+   let linesList = document.createElement('li');
+   let days = document.querySelector('#days');
+
+ }
