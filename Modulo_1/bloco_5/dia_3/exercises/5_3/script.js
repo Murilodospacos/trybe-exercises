@@ -44,7 +44,14 @@ const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
 
 createListDaysCalendary();
 
-function holidays (Holidaysmonth) {
-  
+function buttonHolidays (holidaysMonth) {
+  let button = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-holiday';
+
+  newButton.innerHTML = holidaysMonth;
+  newButton.id = newButtonID;
+  button.appendChild(newButton);
 }
 
+buttonHolidays('Feriados');
