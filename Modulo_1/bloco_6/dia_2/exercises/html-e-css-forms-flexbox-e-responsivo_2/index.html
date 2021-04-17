@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Currículo</title>
+  <link rel="stylesheet" href="bootstrap-5.0.0-beta3-dist/css/bootstrap.min.css">
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="text-center">
+  <h1 class="h1 lead">Cadastre seu Currículo</h1>
+  <p>Preencha seus dados</p>
+  </header>
+  <form class="row g-3">
+      <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" >
+      </div>
+
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormInputGroupUsername">Email</label>
+        <div class="input-group">
+          <div class="input-group-text">@</div>
+          <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="cpf">CPF:</label>
+        <input class="form-control" type="text" id="cpf" name="cpf" maxlength="11">
+      </div>
+
+      <div class="mb-3">
+        <label for="endereco">Endereço:</label>
+        <input class="form-control" type="text" id="endereco" name="endereco" maxlength="200">
+      </div>
+
+      <div class="mb-3">
+        <label for="city">Cidade:</label>
+        <input class="form-control" type="text" id="city" name="city" maxlength="28" required>
+      </div>
+
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Estado</label>
+        <select id="inputState" class="form-select">
+          <option selected>Choose...</option>
+          <option>...</option>
+        </select>
+
+        <legend class="col-form-label col-sm-2 pt-0">Tipo de imóvel</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Casa
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+              Apartamento
+            </label>
+          </div>
+        </div>
+
+    </div>
+
+    <div>
+      <br>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Resumo Currículo</label>
+      </div>
+
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Cargo</label>
+      </div>
+
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Descrição do Cargo</label>
+      </div>
+
+
+      <div class="">
+       <label for="date">Data de início</label>
+       <input type="text" id="date" name="date" maxlength="10" width="100px" required>
+      </div>
+      
+
+      <button type="button" class="btn btn-primary btn-sm">ENVIAR</button>
+      <button type="button" class="btn btn-secondary btn-sm">LIMPAR</button>
+
+    </div>
+   </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
