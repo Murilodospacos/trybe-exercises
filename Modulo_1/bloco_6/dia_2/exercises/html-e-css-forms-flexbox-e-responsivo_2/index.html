@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
-  <link href="validation.min.css" rel="stylesheet">
+  <link href="/node_modules/popup-validation/bin/validation.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/DatePickerX/dist/css/DatePickerX.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body> 
@@ -16,13 +16,13 @@
   </header>
     <!--Corpo do meu Formulário-->
     <section id="form-container" class="section">
-      <form class="js-form" action="" method="GET">
+      <form id="myForm" class="js-form" action="" method="GET">
 
-        <!--NOME-->
+        <!--NOME--> 
         <div class="field">
           <label class="label" for="fname">Nome:</label>
           <div class="control">
-          <input class="input" type="text" id="fname" name="fname" required maxlength="40">
+          <input class="input validate" type="text" id="fname" name="fname" data-validate="required,fname" required maxlength="40">
           </div>
         </div>
 
@@ -30,7 +30,7 @@
         <div class="field">
           <label class="label" for="email">Email:</label>
           <div class="control">
-          <input class="input" type="email" id="email" name="email">
+          <input class="validate input" type="email" id="email" name="email" data-validate="required,email" />
           </div>
         </div>
 
@@ -38,14 +38,14 @@
         <div class="field">
           <label class="label" for="cpf">CPF:</label>
           <div>
-          <input class="input" type="text" id="cpf" name="cpf" maxlength="11">
+          <input class="input validate" type="text" id="cpf" name="cpf" maxlength="11" data-validate="required,cpf">
           </div>
         </div>
 
         <!--ENDEREÇO-->
         <div class="field">
           <label for="endereco">Endereço:</label>
-          <input class="input" type="text" id="endereco" name="endereco" maxlength="200">
+          <input class="validate input" type="text" id="endereco" name="endereco" maxlength="200" data-validate="required,endereco">
         </div>
 
         <!--CIDADE-->
@@ -108,7 +108,7 @@
         <!--DATA-->
         <div class="field">
          <label class="label" for="date">Data de início</label>
-         <input class="input" type="text" id="datepicker" name="date" maxlength="10" width="100px" required>
+         <input class="input" type="text" id="myInputId" name="date" maxlength="10" width="100px" required>
         </div>
         
         <!-- Botões -->
@@ -122,8 +122,8 @@
       </form>
     </section>
     <script src="moment.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-    <script src="validation.min.js"></script>
+    <script src="/node_modules/popup-validation/bin/validation.min.js"></script>
+    <script src="/DatePickerX/dist/js/DatePickerX.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
