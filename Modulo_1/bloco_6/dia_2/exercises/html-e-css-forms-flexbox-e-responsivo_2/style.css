@@ -1,5 +1,6 @@
+@import './node_modules/pikaday/css/pikaday.css';
+
 #form-container {
   width: 80%;
   margin: 0 auto;
 }
-
