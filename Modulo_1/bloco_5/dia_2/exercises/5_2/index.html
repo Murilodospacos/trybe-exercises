@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      //Exercicio 1
+      const myTitle = document.createElement('h1')
+      myTitle.innerHTML = 'Exercicio 5.2 - JavaScript DOM';
+      document.body.appendChild(myTitle);
+
+      //Exercicio 2
+      const myDiv = document.createElement('div');
+      myDiv.className = 'main-content';
+      document.body.appendChild(myDiv);
+      console.log(myDiv);
+
+      //Exercicio 3
+      const mySecondDiv = document.createElement('div')
+      mySecondDiv.className = 'center-content';
+      myDiv.appendChild(mySecondDiv);
+
+      //Exercicio 4
+      const myTagP = document.createElement('p');
+      myTagP.innerHTML = "Aprendendo DOM";
+      mySecondDiv.appendChild(myTagP);
+
+      //Exercicio 5
+      const myThirdDiv = document.createElement('div');
+      myThirdDiv.className = 'left-content';
+      myDiv.appendChild(myThirdDiv);
+
+      //Exercicio 6
+      const myFourthDiv = document.createElement('div');
+      myFourthDiv.className = 'right-content';
+      myDiv.appendChild(myFourthDiv);
+  
+      //Exercicio 7
+      const myImage = document.createElement('img');
+      myimage.src = "https://picsum.photos/200";
+      myImage.className = 'small-image';
+      myThirdDiv.appendChild(myImage);
+      
+      //Exercicio 8
+      const myListUl = document.createElement('ul');
+      myFourthDiv.appendChild(myListUl);
+      let listNumber = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for(let index = 0; index < listNumber.length; index += 1){
+        const itens = document.createElement(li);
+        itens.innerHTML = listNumber[index];
+        myListUl.appendChild(itens);
+      }
+
+      //Exercicio 9
+      for(let index = 0; index <=3; index += 1){
+        const myTagsH3s = document.createElement('h3');
+        myTagsH3s.innerHTML = `Sub título ${[index]}`;
+        myDiv.appendChild(myTagsH3s);
+      }
+
+      // Segunda Parte
+
+      // Exercise 1
+      const newTitle = document.getElementsByTagName('h1')[0];
+      newTitle.className = 'title';
+
+      // Exercise 2
+      const newDescriptionH3 = document.createElement('h3');
+      for(let index = 0; index < 3; index +=1){
+        newDescriptionH3[index].className = 'description';
+      }
+      console.log(newDescriptionH3);
+
+      // Exercise 3
+      const removeDiv = document.getElementsByClassName('left-content')[0];
+      myDiv.removeChild(removeDiv);
+
+      // Exercicio 4
+      const centerDiv = document.getElementsByClassName('right-content')[0];
+      centerDiv.style.marginRight='auto';
+
+      // Exercicio 5
+      const colorBackgroundDiv = document.getElementsByClassName('center-content')[0];
+      colorBackgroundDiv.parentNode.style.backgroundColor = 'green';
+
+      // Exercicio 6
+      myListUl.lastChild.remove();
+      myListUl.lastChild.remove();
+
+    </script>
+  </body>
+</html>

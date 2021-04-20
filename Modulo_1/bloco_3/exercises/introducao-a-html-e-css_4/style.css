@@ -1,0 +1,163 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+#header {
+    background-color: rgb(0, 174, 255);
+    color:rgb(202, 247, 255);
+    font-size: 30px;
+    box-shadow: inset 0 0 1em rgb(0, 255, 221);
+}
+
+.title-container{
+    padding: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+
+.navigationbar{
+    background-color: rgb(21, 219, 226);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(202, 247, 255); 
+    text-decoration: none;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
+}
+main {
+    background-color: rgb(202, 247, 255);
+    margin: 0;
+}
+
+#img1 {
+    width: 550px;
+    height: 420px;
+    padding:  30px;
+    float:left;
+    border-radius: 15%;
+}
+
+.facts {
+    font-size: 15px;
+    padding: 30px 30px 15px;
+    
+}
+span {
+    font-weight: bold;
+}
+
+#scientificname {
+    position: relative;
+    height: 35px;
+    left: -450px;
+}
+
+.classification {
+    text-align: center;
+}
+
+#generalinformation{
+    text-align: center;
+    background-color: rgb(0, 174, 255);
+    color:rgb(202, 247, 255);
+    box-shadow: inset 0 0 1em rgb(0, 255, 221);
+    text-shadow: 1px 1px 2px black;
+    font-size: 25px;
+    padding: 15px;
+}
+
+table {
+    left: 350px;
+    position: relative;
+    top: 10px;
+}
+
+
+table, th, td {
+    padding-left: auto;
+    border: 2px solid black;
+    width: 50%;
+    text-align: center;
+  }
+
+#img3 {
+    float: left;
+    width: 560px;
+    margin-left: 100px;
+    margin-top: 50px;
+    border-radius: 15%;
+}
+
+#img2 {
+    float: right;
+    width: 600px;
+    height: 380px;
+    margin-top: 50px;
+    margin-right: 100px;
+    border-radius: 15%;
+}
+
+.moreinformation {
+    display:inline-block;
+    position: relative;
+    left: 800px;
+    top: 20px;
+}
+
+.eyesight {
+    display: inline-block;
+    position: relative;
+    width: 600px;
+    top: -20px;
+    padding-left: 100px;
+}
+
+.moreinformationSubtitle {
+    text-align: center;
+}
+
+.titlevideo {
+   margin-left: 140px;
+   color:red;
+   padding-bottom: 10px;
+   text-decoration: underline;
+}
+
+.videoanimal {
+    position: relative;
+    left:0;
+    padding-left: 450px;
+    margin: 0;
+}
+
+footer {
+    background-color: rgb(21, 219, 226);
+    padding: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(202, 247, 255); 
+    text-decoration: none;
+    font-weight: 900;
+    text-shadow: 1px 1px 2px black;
+}
+
+.bibliographicReference {
+    padding: 20px;
+    text-decoration: none;
+    text-align: center;
+    list-style-type: none;
+}
+
+.referenceList {
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+}
