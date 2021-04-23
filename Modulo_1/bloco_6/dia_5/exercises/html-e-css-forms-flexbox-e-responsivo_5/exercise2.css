@@ -6,3 +6,174 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+@media screen and (min-width: 360px) and (max-height: 768px) {
+  body {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  header {
+    background-color: gray;
+  }
+  main {
+    background-color: gold;
+  }
+  header p {
+    font-size: 1.5em;
+    text-align: center;
+    color: azure;
+  }
+  nav ul li {
+    padding: 10px;
+    margin: 10px;
+    background-color: azure;
+    width: 80px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  main {
+    padding: 25px;
+  }
+  footer {
+    padding: 0;
+    font-size: 1em;
+    background-color: grey;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 1.8em;
+    margin: 0;
+  }
+  header {
+    background-color: gray;
+  }
+  main {
+    background-color: gold;
+  }
+  header p {
+    font-size: 1.5em;
+    text-align: center;
+    color: azure;
+  }
+  nav ul li {
+    padding: 10px;
+    margin: 10px;
+    background-color: azure;
+    width: 180px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  main {
+    padding: 50px;
+  }
+  footer {
+    padding: 0;
+    font-size: 1em;
+    background-color: grey;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 10024px) and (max-width: 1500px) {
+  body {
+    font-size: 3em;
+    padding: 50px;
+  }
+  header {
+    background-color: gray;
+  }
+  main {
+    background-color: gold;
+  }
+  header p {
+    font-size: 1.5em;
+    text-align: center;
+    color: azure;
+  }
+  nav ul li {
+    padding: 10px;
+    margin: 10px;
+    background-color: azure;
+    width: 80px;
+    border-radius: 5px;
+    list-style: none;
+    text-align: center;
+    font-weight: 600;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  main {
+    padding: 25px;
+  }
+  footer {
+    padding: 0;
+    font-size: 1em;
+    background-color: grey;
+    margin: 0;
+  }
+}
