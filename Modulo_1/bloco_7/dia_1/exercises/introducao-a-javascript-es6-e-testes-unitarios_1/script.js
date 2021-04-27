@@ -42,3 +42,15 @@ Neste caso, a - b retorna
 um número negativo se a for menor que b - então a será classificado à esquerda de b
 um número positivo se a for maior que b - então a será classificado à direita de b
 zero se eles for */
+
+//const factorial = n => n < 2 ? 1 : factorial(n-1) * n;
+//console.log(factorial(5));
+
+
+  let fatorial = (n) => {
+  let result = n;
+  for(let index = 1; index < n; index += 1) {
+    result *= index;
+  }
+}
+console.log(fatorial(5));
