@@ -38,14 +38,19 @@ console.log(customer);
 
 // Praticando
 
-function returnValues (objeto, nome, valor) {
-  let objeto = {};
-  objeto[nome] = valor;
+const customer = {
+  firstName: 'Roberto',
+  age: 22,
+  job: 'Teacher',
+};
 
-  return objeto;
+
+function returnValues (object, name, value) {
+  object[name] = value;
+  
+  return customer;
 }
-
-returnValues(sexo, seu , murilo);
+console.log(returnValues(customer, "Sobrenome", "Silva"));
 
 // Exemplo 1 Parte II - Object.keys
 
