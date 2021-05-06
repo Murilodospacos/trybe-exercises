@@ -64,7 +64,6 @@ const books = [
   },
 ];
 
-
 function allNames() {
 const allNames = books.reduce((names, book) => [...names, book.author.name], []);
 return `Nomes: ${allNames.join(', ')}.`;
