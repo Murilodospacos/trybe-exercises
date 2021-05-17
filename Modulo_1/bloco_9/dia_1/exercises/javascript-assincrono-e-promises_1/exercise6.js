@@ -17,7 +17,7 @@ const sendMarsTemperature = (message, error) => {
   const messageSuccess = Math.random() <= 0.6;
   setTimeout(() => {
     if(messageSuccess) message(currentAction)
-    else onerror('Robot is busy');
+    else error('Robot is busy');
   }, messageDelay());
 }
 
