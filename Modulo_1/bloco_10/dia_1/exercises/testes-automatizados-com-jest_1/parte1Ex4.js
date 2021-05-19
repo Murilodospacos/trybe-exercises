@@ -7,8 +7,6 @@
   5.Faça uma chamada com um parâmetro que não é um número e verifique se o retorno é o esperado
 */
 
-const assert = require('assert');
-
 function myFizzBuzz(num) {
   if (typeof num !== 'number') return false;
   if (num % 3 === 0 && num % 5 === 0) return 'fizzbuzz';
@@ -16,5 +14,6 @@ function myFizzBuzz(num) {
   if (num % 5 === 0) return 'buzz';
   return num;
 }
+console.log(myFizzBuzz(49));
+module.exports = myFizzBuzz;
 
-// implemente seus testes aqui
