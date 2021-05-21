@@ -1,4 +1,4 @@
-const mathSubtrair = require('../conteudo/exemplos/exercise1');
+const mathSubtrair = require('../exemplos/exercise1');
 
 test("#subtrair", () => {
   //testando se a função foi chamada

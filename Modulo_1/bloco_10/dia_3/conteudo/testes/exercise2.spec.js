@@ -1,4 +1,4 @@
-const mathMultiplicar = require('../conteudo/exemplos/exercise2');
+const mathMultiplicar = require('../exemplos/exercise2');
 
 test("#multiplicar", () => {
   // Testando se a função foi chamada e qual seu retorno
