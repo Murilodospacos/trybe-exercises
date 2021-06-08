@@ -8,6 +8,10 @@ class App extends Component {
       // requisito 1
       <BrowserRouter>
         <Home />
+        {/* Requisito 2 */}
+        <Route exact path="/" component={ Home } />
+        {/* Requisito 3 */}
+        <Route path="/about" component={ About } />
       </BrowserRouter>
     );
   }
