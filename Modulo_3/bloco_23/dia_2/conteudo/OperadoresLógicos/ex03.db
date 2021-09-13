@@ -1,0 +1,1 @@
+db.restaurants.find({$and: [{ rating: {$gt: 4} }, { borough:{ $in: ["Brooklyn","Staten Island", "Brooklyn"] }}] }).count();
