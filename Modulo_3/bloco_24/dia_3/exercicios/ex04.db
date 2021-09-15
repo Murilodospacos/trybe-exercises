@@ -1,10 +1,10 @@
 use("class");
 db.movies.updateOne(
-  {title: "Home Alone"},
+  {title: "Godzilla"},
   {
     $push: {
       ratings:{
-        $each: [200, 99, 65]
+        $each: [78, 52, 95, 102]
       }
     }
   }
