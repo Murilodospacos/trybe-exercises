@@ -1,0 +1,8 @@
+use("agg_example");
+db.transactions.aggregate([
+  {
+    $project : {
+      bank: 1,
+      }
+    }
+]);
