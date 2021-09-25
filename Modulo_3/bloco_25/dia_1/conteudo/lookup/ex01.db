@@ -1,0 +1,11 @@
+use("agg_example");
+db.transactions.aggregate([
+  {
+    $lookup: {
+      from: "clients",
+      localField: "from",
+      foreignField: "name",
+      as: "transactions_done",
+    }
+  }
+]);

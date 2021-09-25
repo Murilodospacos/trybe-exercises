@@ -1,0 +1,11 @@
+use("agg_example");
+db.transactions.aggregate([
+  {
+    $match: {
+      value:{ $gte: 1000 }
+    },
+  },
+  {
+    $limit: 3
+  }, 
+]);
