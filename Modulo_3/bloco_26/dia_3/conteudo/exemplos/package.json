@@ -1,0 +1,16 @@
+{
+  "name": "exemplos",
+  "version": "1.0.0",
+  "description": "testes com NodeJs",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "tests": "mocha tests"
+  },
+  "author": "Murilo dos Paços",
+  "license": "ISC"
+}
