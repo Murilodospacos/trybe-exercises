@@ -1,2 +1,7 @@
-use('booksDb');
-db.books.find({status: 'MEAP' },{title: 1, author: 1, status: 1}).limit(10).skip(5).pretty();
+use("class");
+db.movies.updateOne(
+  { title: "Home Alone"},
+  { $currentDate: { "lastUpdated": { $type: "timestamp"} }},
+);
+use("class");
+db.movies.find();

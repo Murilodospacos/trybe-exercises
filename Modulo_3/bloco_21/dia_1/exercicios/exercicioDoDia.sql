@@ -1,116 +1,62 @@
--- 1 Escreva uma query que exiba o maior salário da tabela.
-SELECT MAX(SALARY)
-FROM hr.employees;
+-- 1-Um zoológico precisa de um banco de dados para armazenar informações sobre os seus animais. As informações a serem armazenadas sobre cada
+-- animal são:
+-- Nome;
+-- Espécie;
+-- Sexo;
+-- Idade;
+-- Localização.
+-- Cada animal também possui vários cuidadores, e cada cuidador pode ser responsável por mais de um animal. Além disso, cada cuidador possui 
+-- um gerente, sendo que cada gerente pode ser responsável por mais de um cuidador.
+-- Siga os passos aprendidos no dia de hoje para modelar essa base de dados.
+-- Identificar as entidades, atributos e relacionamentos.
 
--- 2 Escreva uma query que exiba a diferença entre o maior e o menor salário.
-SELECT  MAX(SALARY) - MIN(SALARY)
-FROM hr.employees;
+-- Identificação das Entidades :
+-- Entidade 1: Animal ;
+-- Entidade 2: Cuidador ;
+-- Entidade 3: Gerente ;
+-- Entidade 4: Cuidador e Animal;
 
--- 3  Escreva uma query que exiba a média salarial de cada JOB_ID , ordenando pela média salarial em ordem decrescente.
-SELECT  JOB_ID, AVG(SALARY) AS 'average_salary'
-FROM hr.employees
-GROUP BY JOB_ID
-ORDER BY `average_salary` DESC;
+-- Identificação dos Atributos :
+-- Animal: animal_id, nome, especie, sexo, idade, localização;
+-- Cuidador: nome, cuidador_id, gerente_id;
+-- Gerente: nome, gerente_id;
+-- Cuidador e Animal: cuidador_id e animal_id ;
 
--- 4 Escreva uma query que exiba a quantidade de dinheiro necessária para realizar o pagamento de todas as pessoas funcionárias.
-SELECT SUM(SALARY)
-FROM hr.employees;
+-- Identificação dos Relacionamentos:
+-- Um animal pode possuir mais de um cuidador;
+-- Um cuidador pode cuidar de varios animais;
+-- Um cuidador possui um Gerente;
+-- Um Gerente é responsável por vários cuidadores;
 
--- 5 Escreva uma query que exiba quatro informações: o maior salário, o menor salário, a soma de todos os salários
--- e a média dos salários. Todos os valores devem ser formatados para ter apenas duas casas decimais.
-SELECT MAX(SALARY),
-    MIN(SALARY),
-  SUM(SALARY),
-    ROUND(AVG(SALARY), 2)
-FROM hr.employees;
+DROP SCHEMA IF EXISTS zoologico;
+    CREATE SCHEMA zoologico;
+    USE zoologico;
 
--- 6 Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras ( IT_PROG ).
-SELECT JOB_ID , COUNT(*) AS 'total'
-FROM hr.employees
-WHERE JOB_ID = "IT_PROG";
+    CREATE TABLE animal(
+        animal_id INT PRIMARY KEY AUTO_INCREMENT,
+        nome VARCHAR(50) NOT NULL,
+        especie VARCHAR(50) NOT NULL,
+        sexo VARCHAR(50) NOT NULL,
+        idade INT NOT NULL,
+        localizacao VARCHAR(50) NOT NULL
+    );
 
--- 7 Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão ( JOB_ID ).
-SELECT JOB_ID, SUM(SALARY)
-FROM hr.employees
-GROUP BY JOB_ID;
+     CREATE TABLE gerente(
+        gerente_id INT PRIMARY KEY AUTO_INCREMENT,
+        nome VARCHAR(50) NOT NULL
+    );
 
--- 8 Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras ( IT_PROG ).
-SELECT JOB_ID, SUM(SALARY)
-FROM hr.employees
-GROUP BY JOB_ID
-HAVING JOB_ID = "IT_PROG";
+    CREATE TABLE cuidador(
+        cuidador_id INT PRIMARY KEY AUTO_INCREMENT,
+        nome VARCHAR(50) NOT NULL,
+        gerente_id INT NOT NULL,
+        FOREIGN KEY (gerente_id) REFERENCES gerente (gerente_id)
+    );
 
--- 9 Escreva uma query que exiba em ordem decrescente a média salarial de todos os cargos, exceto das pessoas programadoras ( IT_PROG ).
-SELECT job_id, AVG(salary) 'average_salary'
-FROM hr.employees
-WHERE job_id <> 'IT_PROG'
-GROUP BY job_id
-ORDER BY `average_salary` DESC;
-
--- 10 Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo department_id .
-SELECT department_id,
-    AVG(salary) 'average_salary' ,
-    COUNT(*) 'number_of_employees'
-FROM hr.employees
-GROUP BY department_id
-HAVING `number_of_employees` > 10;
-
--- 11 Escreva uma query que atualize a coluna PHONE_NUMBER , de modo que todos os telefones iniciados por 515 agora devem iniciar com 777 .
-UPDATE hr.employees
-SET phone_number = REPLACE(phone_number, '515', '777')
-WHERE phone_number LIKE '515%';
-
--- 12 Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
-SELECT *
-FROM hr.employees
-WHERE LENGTH(first_name) >= 8;
-
--- 13 Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e ano no qual foi contratado (exiba somente o ano).
-SELECT employee_id, first_name,
-    LEFT(hire_date, 4) 'hire_year'
-FROM hr.employees;
--- OR
-SELECT employee_id, first_name,
-    MID(hire_date, 1, 4) 'hire_year'
-FROM hr.employees;
-
--- 14. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).
-SELECT employee_id, first_name,
-    RIGHT(hire_date, 2) 'hire_day'
-FROM hr.employees;
--- OR
-SELECT employee_id, first_name,
-    MID(hire_date, 9, 2) 'hire_day'
-FROM hr.employees;
--- OR
-SELECT employee_id, first_name,
-    DAY(hire_date) 'hire_day'
-FROM hr.employees;
-
--- 15. Escreva uma query que exiba as seguintes informações de cada funcionário: id , primeiro nome e mês no qual foi contratado (exiba somente o mês).
-SELECT employee_id, first_name,
-    SUBSTRING(hire_date, 6, 2) 'hire_month'
-FROM hr.employees;
--- OR
-SELECT employee_id, first_name,
-    MONTH(hire_date) 'hire_month'
-FROM hr.employees;
-
--- 16. Escreva uma query que exiba os nomes dos funcionários em letra maiúscula.
-SELECT UPPER(CONCAT(FIRST_NAME, " ", LAST_NAME))
-FROM hr.employees;
-
--- 17: Escreva uma query que exiba o sobrenome e a data de contratação de todos os funcionário contratados em julho de 1987.
-SELECT LAST_NAME _NAME, HIRE_DATE
-FROM hr.employees
-WHERE HIRE_DATE  BETWEEN '1987-07-01'  AND '1987-07-31';
-
-SELECT LAST_NAME _NAME, HIRE_DATE
-FROM hr.employees
-WHERE MONTH(HIRE_DATE)=7 and YEAR(HIRE_DATE)=1987;
-
--- 18: Escreva uma query que exiba as seguintes informações de cada funcionário: nome , sobrenome , tempo que trabalha na empresa (em dias) .
-SELECT first_name,
-    last_name,
-    DATEDIFF(CURRENT_DATE() , HIRE_DATE) 'days_worked'
-FROM hr.employees;
+    CREATE TABLE animal_cuidador(
+        animal_id INT,
+        cuidador_id INT,
+        CONSTRAINT PRIMARY KEY(animal_id, cuidador_id),
+        FOREIGN KEY (animal_id) REFERENCES animal (animal_id),
+        FOREIGN KEY (cuidador_id) REFERENCES cuidador (cuidador_id)
+    );

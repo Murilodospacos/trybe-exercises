@@ -1,7 +1,15 @@
-use("class");
-db.movies.updateOne(
-  { title: "Home Alone"},
-  { $set: { bulget: 15, imdbRating: 5.5 } },
-);
-use("class");
-db.movies.find();
+use('erp');
+db.clientes.aggregate([
+  {
+    $match:{
+      sexo: "FEMININO",
+      dataNascimento: {
+        $gte: ISODate('1995-01-01'),
+        $lte: ISODate('2005-12-31')
+      }
+    }
+  },
+  {
+    $limit: 5
+  }
+]);

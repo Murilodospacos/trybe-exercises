@@ -1,5 +1,0 @@
-use("class");
-db.movies.updateMany(
-  { title: "Home Alone", "cast.actor": "Daniel Stern" },
-  { $set: { "cast.$.character": "Marv" }}
-);

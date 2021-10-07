@@ -1,3 +1,22 @@
-use('class');
-db.superheroes.count({"aspects.eyeColor":"blue" });
-
+use("class");
+db.movies.updateMany(
+  { title: "Home Alone" },
+    { $push: {
+        cast: {
+          $each: [
+          {
+            "actor": "Macaulay Culkin",
+            "character": "Kevin"
+          },
+          {
+              "actor": "Joe Pesci",
+              "character": "Harry"
+          },
+          {
+            "actor": "Daniel Stern"
+          }
+        ],
+      },
+    },
+  },
+);

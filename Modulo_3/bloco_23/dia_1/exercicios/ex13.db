@@ -1,0 +1,7 @@
+use("class");
+db.movies.updateMany(
+  { title: "Batman", title: "Home Alone" },
+  { $max: { imdbRating: 17 }},
+);
+use("class");
+db.movies.find();

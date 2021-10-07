@@ -1,7 +1,9 @@
-use("class");
-db.movies.updateOne(
-  { title: "Batman"},
-  { $mul: { imdbRating: 2 } },
-);
-use("class");
-db.movies.find();
+use('erp');
+db.clientes.aggregate([
+  {
+   $group: {
+     _id: { sexo: "$sexo", uf: "$endereco.uf" },
+     total: { $sum: 1 }
+   }
+  }
+]);

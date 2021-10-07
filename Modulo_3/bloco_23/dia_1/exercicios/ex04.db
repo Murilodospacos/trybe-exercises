@@ -1,1 +1,7 @@
-db.bios.find({'name.first': 'John' }).pretty();
+use("class");
+db.movies.updateOne(
+  { title: "Batman"},
+  { $inc: { imdbRating: 2 } },
+);
+use("class");
+db.movies.find();

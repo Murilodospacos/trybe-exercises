@@ -1,5 +1,6 @@
-use ("class");
-db.movies.updateOne(
-  { title: "Batman"},
-  { $set: { "imdbRating": 7.7 }},
-);
+use('erp');
+db.clientes.aggregate([{
+  $match:{
+    sexo: "MASCULINO"
+  }
+}]);

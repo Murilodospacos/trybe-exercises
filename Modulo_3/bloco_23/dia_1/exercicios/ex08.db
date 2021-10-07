@@ -1,2 +1,7 @@
-use('booksDb');
-db.books.count({status: 'PUBLISH'});
+use("class");
+db.movies.updateOne(
+  { title: "Home Alone"},
+  { $min: { "budget": 5 } },
+);
+use("class");
+db.movies.find();

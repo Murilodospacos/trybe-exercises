@@ -1,2 +1,7 @@
-use ('booksDb');
-db.books.count();
+use("class");
+db.movies.updateOne(
+  { title: "Batman"},
+  { $rename: { "budget": "estimatedBudget" } },
+);
+use("class");
+db.movies.find();

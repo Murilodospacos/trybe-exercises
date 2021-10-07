@@ -1,1 +1,7 @@
-db.bios.find({_id: 8},{ name: 1, birth: 1, _id: 0 });
+use("class");
+db.movies.updateOne(
+  { title: "Home Alone"},
+  { $set: { bulget: 15, imdbRating: 5.5 } },
+);
+use("class");
+db.movies.find();

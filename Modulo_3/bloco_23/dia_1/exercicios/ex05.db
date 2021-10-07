@@ -1,1 +1,7 @@
-db.bios.find().limit(3).pretty();
+use("class");
+db.movies.updateOne(
+  { title: "Home Alone"},
+  { $inc: { budget: 5 } },
+);
+use("class");
+db.movies.find();

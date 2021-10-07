@@ -1,3 +1,5 @@
-use('class');
-db.superheroes.find({ "aspects.eyeColor":"green" }).pretty();
-db.superheroes.find({ "aspects.eyeColor": { $eq: "green" } }).pretty();
+use("class");
+db.movies.updateMany(
+  { title: { $in:["Batman", "Home Alone"] } },
+  { $push: { category: "90's" } },
+);
