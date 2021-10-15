@@ -53,7 +53,17 @@
             .then((result) => ({ id: result.insertedId, firstName, lastName, email }));
     }
 
+function findAll() {
+        return connection()
+            // Utilizamos o `find` para buscar todos os documentos da collection `users`.
+            // O `toArray` aqui é importante pois ele busca **todos** os registros, e transforma o resultado
+            // em um array, como o próprio nome diz 😄
+            .then((db) => db.collection('users').find().toArray())
+            .then((results) => results.map(formatUser));
+    }
+
     module.exports = {
         isValid,
         create,
+        findAll,
     };

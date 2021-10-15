@@ -10,16 +10,7 @@
        lastName: Joi.string().required(),
        email: Joi.string().email().required(),
        password: Joi.string().min(6).required(),
-   }).messages({
-       'any.required': 'O campo {
-{: id="label" }} é obrigatório',
-       'string.min': 'O campo {
-{: id="label" }} deve ter, pelo menos, {
-{: id="limit" }} caracteres',
-       'string.email': 'Informe um email válido no campo {
-{: id="label" }}',
-   });
-
+   })
    // Depois, exportamos um array de middlewares. O primeiro valida a requisição, o segundo chama o model
    module.exports = [
    (req, res, next) => {
